@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Button from './components/Button';
+import operands from './operands';
+import './styles/styles.css';
 
-function App() {
+const App = () => {
+
+  const [currentValue, setCurrentValue] = useState("");
+  const [output, setOutput] = useState("");
+
+  const buttons = operands.map(operand => 
+    <Button 
+      operand={operand} 
+      currentValue={currentValue}
+      setCurrentValue={setCurrentValue}
+      setOutput={setOutput}
+      key={operand.id}
+    />
+  )
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <h1 className="title">Javascript Calculator</h1>
+      <div className="calculator">
+        <div className="calculator-output">
+          <div id="previous">
+            {output}
+          </div>
+          <div className="current" id="display">
+            {currentValue ? currentValue : "0"}
+          </div>
+        </div>
+        <div className="calculator-pad">
+          {buttons}
+        </div>  
+      </div>
     </div>
-  );
+  )
 }
 
 export default App;

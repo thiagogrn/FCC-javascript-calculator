@@ -1,0 +1,27 @@
+@use '../abstracts/colors' as *;
+
+.btn {
+    border: 1px solid $dark-gray;
+    padding: 1.6rem;
+    font-size: 2em;
+    background-color: $medium-gray;
+    color: white;
+}
+
+.btn:hover {
+    border: 1px solid white;
+}
+
+#clear {
+    background-color: $red;
+    grid-column: span 2;
+}
+
+#zero {
+    grid-column: span 2;
+}
+
+#equals {
+    grid-row: span 2;
+    background-color: $blue;
+}
