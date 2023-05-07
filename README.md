@@ -7,9 +7,9 @@ This is a solution to the FreeCodeCamp Javascript Calculator project.
 - [React](https://reactjs.org/) - JS library
 - SASS
 
-## Live Solution
+## Links
 
-- [Solution](https://thiagogrn.github.io/FCC-javascript-calculator/)
+- Live Site URL: https://thiagogrn.github.io/FCC-javascript-calculator/
 
 ## Author
 
